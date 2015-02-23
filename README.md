@@ -1,1 +1,3 @@
-# totempaaltj.github.io
+# totempaal.tj
+
+My homepage. Isn't it rad?
