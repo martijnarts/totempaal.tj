@@ -1,31 +1,31 @@
 {% include header.html %}
 
-      {% if hero %}
+      {% if page.hero %}
       <div id="top">
         <div id="hero">
-          <img src="{{ hero }}" alt="Hero">
+          <img src="{{ page.hero }}" alt="Hero">
         </div>
       </div>
       {% endif %}
 
       <div id="bar">
         <header>
-          <h1>{{ title }}</h1>
+          <h1>{{ page.title }}</h1>
         </header>
-        <div id="newer">{% if newer %}<a href="{{ newer }}">&lt; newer</a>{% endif %}</div>
-        <div id="older">{% if older %}<a href="{{ older }}">older &gt;</a>{% endif %}</div>
+        <div id="newer">{% if post.next %}<a href="{{ post.next }}">&lt; newer</a>{% endif %}</div>
+        <div id="older">{% if post.previous %}<a href="{{ post.previosu }}">older &gt;</a>{% endif %}</div>
       </div>
 
       <div id="post">
         <div id="meta" class="minor">
-          <div id="tags">
+          {#<div id="tags">
           Tags:
             {%- for tag in tags %}
               <a href="/archive.html?tags={{ tag }}" class="nostyle">{{ tag }}</a>
             {% endfor -%}
-          </div>
+          </div>#}
           <div id="date">
-            <time datetime="{{ datetime }}">{{ date }}</time>
+            <time datetime="{{ post.date }}">{{ post.date | date:"%b %d" }}</time>
           </div>
         </div>
 
