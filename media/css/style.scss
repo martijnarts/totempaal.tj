@@ -1,0 +1,67 @@
+// Main styles for http://totempaal.tj
+// Made by, owned by and (c) Martijn Arts 2013 and onwards.
+@import "mixins";
+
+html, head, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #eaeaea;
+}
+body {
+  overflow-y: scroll;
+}
+#container {
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  padding: 120px 0 0 0;
+  background-color: #eaeaea;
+}
+@media all and (max-width: 700px) {
+  #container {
+    padding: 35px 0 0 0;
+  }
+}
+.red {
+  color: #ff0000;
+}
+.minor {
+  color: #888;
+}
+
+#top {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  &:link, &:visited {
+    color: #f00;
+    &.nostyle {
+      color: inherit;
+    }
+
+    transition: color 0.2s linear;
+  }
+  &:hover {
+    color: #a00;
+
+    &.nostyle {
+      color: #f00;
+    }
+  }
+  &:active, &:active.nostyle {
+    color: #600;
+  }
+}
+
+@import "header";
+@import "hero";
+@import "post";
+@import "footer";
+@import "archive";

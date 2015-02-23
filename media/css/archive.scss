@@ -1,0 +1,36 @@
+#archive {
+  list-style-type: none;
+  margin: -120px 0 0 0;
+  padding: 0;
+
+  li {
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 30px 40px;
+    text-align: justify;
+
+    width: 700px;
+    z-index: 1;
+    background-color: #fff;
+
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  #archive {
+    margin-top: 0px;
+
+    li {
+      width: 100%;
+      margin: 30px 0;
+      padding: 15px 20px;
+    }
+  }
+}

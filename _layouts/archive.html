@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Archive of TotempaaltJ's Blog</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400|Lato:900|Ubuntu+Mono:400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ base_url }}media/css/style.css">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <header>
+          <a href="http://totempaal.tj/">totempaal<span class="red">.</span>tj</a>
+        </header>
+        <menu class="right">
+          <li><a class="active" href="/archive">archive</a></li>
+          <li><a href="http://martijnarts.com" id="aboutlink">about/portfolio</a></li>
+        </menu>
+      </div>
+
+      <ul id="archive">
+      {% for post in posts %}
+        <li id="{{ post.slug }}" class="{% for tag in post.tags %}tag-{{ tag }} {% endfor %}">
+          <div id="meta" class="minor">
+            <div id="tags">
+            Tags:
+              {% for tag in post.tags %}
+                <a href="/archive.html?tags={{ tag }}" class="nostyle">{{ tag }}</a>
+              {% endfor %}
+            </div>
+            <div id="date">
+              <time datetime="{{ post.date.strftime('%Y-%m-%dT%H:%M:%S%z') }}">{{ post.date.strftime('%A, %b %d, %Y') }}</time>
+            </div>
+          </div>
+          <a href="{{ post.slug }}.html">{{ post.title }} &gt;</a>
+        </li>
+      {% endfor %}
+      </ul>
+
+      <div id="footer" class="minor">
+        <footer>
+          text and photos by Martijn Arts, licensed under
+          <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" class="nostyle">CC BY-NC-ND 3.0</a>
+          (unless otherwise mentioned)
+        </footer>
+      </div>
+    </div>
+
+    <!-- Scripts at the end for speeeed! -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="{{ base_url }}media/js/jquery.superscrollorama.js"></script>
+    <script src="{{ base_url }}media/js/jquery-picture-min.js"></script>
+    <script src="{{ base_url }}media/js/script.js"></script>
+  </body>
+</html>

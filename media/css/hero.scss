@@ -1,0 +1,22 @@
+// Hero styles
+// Made by, owned by and (c) Martijn Arts 2013 and onwards.
+
+#top {
+  position: relative;
+  margin: -90px auto 0;
+  padding: 0;
+
+  width: 900px;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #top {
+    margin-top: 0;
+    width: 100%;
+  }
+}

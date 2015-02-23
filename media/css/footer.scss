@@ -1,0 +1,17 @@
+#footer {
+  box-sizing: border-box;
+  width: 700px;
+  margin: 30px auto;
+  padding-bottom: 20px;
+
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+@media all and (max-width: 700px) {
+  #footer {
+    width: 100%;
+  }
+}

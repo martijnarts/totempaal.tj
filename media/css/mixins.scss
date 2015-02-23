@@ -1,0 +1,11 @@
+@mixin stripes($size: 5px, $deg: 90deg) {
+  // Horizontal strips aww yeah
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(0, 0, 0, .05)), color-stop(.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient($deg, rgba(0, 0, 0, .05) 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient($deg, rgba(0, 0, 0, .05) 50%, transparent 50%, transparent);
+  background-image: linear-gradient($deg, rgba(0, 0, 0, .05) 50%, transparent 50%, transparent);
+  -webkit-background-size: $size $size;
+  -moz-background-size: $size $size;
+  background-size: $size $size;
+}

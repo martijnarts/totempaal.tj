@@ -1,0 +1,210 @@
+#bar {
+  box-sizing: border-box;
+
+  position: relative;
+  margin: -90px auto 0;
+  padding: 30px 40px;
+
+  height: 90px;
+  width: 700px;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  header {
+    text-align: center;
+    width: 460px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -230px;
+
+    display: table;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 22px;
+
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+#newer, #older {
+  z-index: 1;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0; left: 0;
+  padding: 0 30px;
+
+  a {
+    display: block;
+    color: #888;
+    margin: 50% 0;
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: 0.1s linear color;
+    &:hover {
+      color: #f00;
+    }
+    &:active {
+      color: #000;
+    }
+  }
+
+  float: left;
+}
+#older {
+  float: right;
+  left: auto; right: 0;
+  a {
+    padding: 8px 0;
+  }
+}
+
+.minor {
+  width: 100%;
+  text-align: center;
+
+  display: block;
+  font-size: 14px;
+  bottom: 4px;
+}
+@media all and (max-width: 700px) {
+  #bar {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    padding: 15px 20px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    header {
+      width: 100%;
+      position: static;
+      margin-left: 0;
+    }
+  }
+
+  #newer, #older {
+    position: static;
+    height: auto;
+
+    a {
+      margin: 0;
+    }
+  }
+}
+
+
+#post {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px 40px;
+  text-align: justify;
+
+  width: 700px;
+  background-color: #fff;
+
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+
+  p {
+    margin: {
+      top: 0;
+      bottom: 40px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  figure {
+    display: block;
+    width: 700px;
+    margin: 0 -40px 40px;
+
+    img {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    pre {
+      font-family: 'Ubuntu Mono', monospace;
+      border-left: 5px solid #555;
+      padding: 10px 15px;
+      margin: 0 0 10px;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 15px;
+      font-style: italic;
+      margin: 0;
+    }
+    pre + figcaption {
+      text-align: inherit;
+      margin: 0;
+    }
+  }
+
+  code {
+    font-family: 'Ubuntu Mono', monospace;
+    color: #333;
+  }
+}
+#meta {
+  box-sizing: border-box;
+
+  font-family: 'Droid Sans', sans-serif;
+  width: 640px;
+  padding: 0;
+  margin: 0 auto 10px;
+  font-size: 15px;
+  overflow: auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #tags {
+    float: left;
+  }
+  #date {
+    float: right;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #post {
+    width: 100%;
+    padding: 15px 20px;
+
+    figure {
+      width: calc(100% + 60px);
+    }
+  }
+  #meta {
+    width: auto;
+
+    #tags, #date {
+      display: block;
+      float: none;
+    }
+  }
+}
