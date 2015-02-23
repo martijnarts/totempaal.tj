@@ -1,8 +1,9 @@
 ---
-layout: page
-title: Coming Soon
 ---
-<p>http://totempaal.tj/ will be coming soon.</p>
-{# assign post = site.posts.first #}
-{# assign content = post.content #}
-{# include post_detail.html #}
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% include header.html %}
+
+{% include post_detail.html %}
+
+{% include footer.html %}

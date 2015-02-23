@@ -1,0 +1,5 @@
+timezone: Europe/Amsterdam
+markdown: redcarpet
+
+sass:
+    sass_dir: _sass

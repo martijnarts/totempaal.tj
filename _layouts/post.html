@@ -1,44 +1,5 @@
 {% include header.html %}
 
-      {% if page.hero %}
-      <div id="top">
-        <div id="hero">
-          <img src="{{ page.hero }}" alt="Hero">
-        </div>
-      </div>
-      {% endif %}
+{% include post_detail.html %}
 
-      <div id="bar">
-        <header>
-          <h1>{{ page.title }}</h1>
-        </header>
-        <div id="newer">{% if post.next %}<a href="{{ post.next }}">&lt; newer</a>{% endif %}</div>
-        <div id="older">{% if post.previous %}<a href="{{ post.previosu }}">older &gt;</a>{% endif %}</div>
-      </div>
-
-      <div id="post">
-        <div id="meta" class="minor">
-          {#<div id="tags">
-          Tags:
-            {%- for tag in tags %}
-              <a href="/archive.html?tags={{ tag }}" class="nostyle">{{ tag }}</a>
-            {% endfor -%}
-          </div>#}
-          <div id="date">
-            <time datetime="{{ post.date }}">{{ post.date | date:"%b %d" }}</time>
-          </div>
-        </div>
-
-        {{ content }}
-
-        {#
-          <figure>
-            <pre><code>.c {
-  background-color: #efefef;
-}</code></pre>
-            <figcaption>This is a piece of code, as you, I think, can see.</figcaption>
-          </figure>
-        #}
-      </div>
-
-{% include header.html %}
+{% include footer.html %}
