@@ -106,7 +106,7 @@
 #post {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 40px 30px;
+    padding: 0 40px 0;
 
     width: 700px;
     background-color: #fff;
@@ -169,25 +169,51 @@
         font-weight: 300;
     }
 
+    small {
+        font-size: 15px;
+    }
+
 
     img, div.highlight {
         display: block;
         width: 700px;
         margin: 40px -40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     pre {
         font-family: $font-mono, monospace;
         padding: 20px 15px 20px 40px;
-        margin: 0 0 10px;
         font-size: 17px;
         line-height: 1.6;
+        overflow: scroll;
+        margin: 0 0 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        code {
+            color: #eee;
+        }
     }
 
     code {
         font-family: $font-mono, monospace;
         color: #333;
         font-weight: 300;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
     }
 }
 #meta {

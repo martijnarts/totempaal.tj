@@ -72,3 +72,11 @@ a {
 @import "footer";
 @import "archive";
 @import "syntax";
+
+.underline {
+    @include underoutline(3, #fff, 2px, #000);
+
+    &:after {
+        top: -2px;
+    }
+}
