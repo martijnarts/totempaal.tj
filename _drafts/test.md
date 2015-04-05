@@ -1,5 +1,5 @@
 ---
-title: This is a test post!
+title: This is a real test post and quite a long one!
 ---
 
 Ad pro idque omnes maiorum. Duo wisi insolens scribentur te, ei dolor timeam singulis ius, duo an solum perpetua. Ea has labore tacimates, eos soluta altera te, movet iriure eam et. Ut mel homero tempor denique. Quo postea signiferumque ea, reque iudicabit mediocritatem nec eu, ut est antiopam elaboraret. Id noluisse efficiantur ius. Vix causae pertinacia concludaturque ut, qui aliquip philosophia te.

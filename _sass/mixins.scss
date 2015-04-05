@@ -9,3 +9,46 @@
   -moz-background-size: $size $size;
   background-size: $size $size;
 }
+
+@mixin underoutline($out-width, $out-color, $under-width, $under-color) {
+    $shadows: ();
+    @for $x from 1 through $out-width {
+        @for $y from 1 through $out-width {
+            $shadows: append($shadows, $out-color $x*1px $y*1px, comma);
+        }
+    }
+    @for $x from 1 through $out-width {
+        @for $y from 1 through $out-width {
+            $shadows: append($shadows, $out-color $x*-1px $y*1px, comma);
+        }
+    }
+    @for $x from 1 through $out-width {
+        @for $y from 1 through $out-width {
+            $shadows: append($shadows, $out-color $x*1px $y*-1px, comma);
+        }
+    }
+    @for $x from 1 through $out-width {
+        @for $y from 1 through $out-width {
+            $shadows: append($shadows, $out-color $x*-1px $y*-1px, comma);
+        }
+    }
+
+    position: relative;
+    display: inline;
+    color: transparent;
+    z-index: 0;
+    border-bottom: $under-width solid $under-color;
+    width: auto;
+
+    &:after {
+        content: attr(data-content);
+        display: block;
+        width: 603px;
+        position: absolute;
+        top: 10px; left: 0;
+        z-index: 1;
+        color: #000;
+        text-shadow: $shadows;
+        cursor: text;
+    }
+}
