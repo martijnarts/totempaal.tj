@@ -1,3 +1,24 @@
+{% if page.title %}
+    {% assign title = page.title %}
+{% elsif post.title %}
+    {% assign title = post.title %}
+{% endif %}
+{% if page.next %}
+    {% assign next = page.next %}
+{% elsif post.next %}
+    {% assign next = post.next %}
+{% endif %}
+{% if page.previous %}
+    {% assign previous = page.previous %}
+{% elsif post.previous %}
+    {% assign previous = post.previous %}
+{% endif %}
+{% if page.date %}
+    {% assign date = page.date %}
+{% elsif post.date %}
+    {% assign date = post.date %}
+{% endif %}
+
 {% if page.hero %}
 <div id="top">
     <div id="hero">
@@ -8,15 +29,15 @@
 
 <div id="bar">
     <header>
-        <h1><span data-content="{{ post.title }}">{{ post.title }}</span></h1>
+        <h1><span data-content="{{ title }}">{{ title }}</span></h1>
     </header>
-    <div id="newer">{% if post.next %}<a href="{{ post.next }}">&lt; newer</a>{% endif %}</div>
-    <div id="older">{% if post.previous %}<a href="{{ post.previosu }}">older &gt;</a>{% endif %}</div>
+    <div id="newer">{% if next %}<a href="{{ next }}">&lt; newer</a>{% endif %}</div>
+    <div id="older">{% if previous %}<a href="{{ previous }}">older &gt;</a>{% endif %}</div>
 </div>
 
 <div id="post">
     <div id="meta" class="minor">
-        <time datetime="{{ post.date }}">{{ post.date | date:"%b %d, %Y" }}</time>
+        <time datetime="{{ date }}">{{ date | date:"%b %d, %Y" }}</time>
     </div>
 
     {{ content }}
