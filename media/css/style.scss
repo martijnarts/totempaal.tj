@@ -71,7 +71,7 @@ a {
 @import "post";
 @import "footer";
 @import "archive";
-@import "syntax";
+@import "zenburn";
 
 .underline {
     @include underoutline(3, #fff, 2px, #000);
