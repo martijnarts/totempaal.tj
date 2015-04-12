@@ -12,43 +12,36 @@
 
 @mixin underoutline($out-width, $out-color, $under-width, $under-color) {
     $shadows: ();
-    @for $x from 1 through $out-width {
-        @for $y from 1 through $out-width {
-            $shadows: append($shadows, $out-color $x*1px $y*1px, comma);
-        }
-    }
-    @for $x from 1 through $out-width {
-        @for $y from 1 through $out-width {
-            $shadows: append($shadows, $out-color $x*-1px $y*1px, comma);
-        }
-    }
-    @for $x from 1 through $out-width {
-        @for $y from 1 through $out-width {
-            $shadows: append($shadows, $out-color $x*1px $y*-1px, comma);
-        }
-    }
-    @for $x from 1 through $out-width {
-        @for $y from 1 through $out-width {
-            $shadows: append($shadows, $out-color $x*-1px $y*-1px, comma);
+
+    @each $xm in (-1, 1) {
+        @each $ym in (-1, 1) {
+            @for $x from 1 through $out-width {
+                @for $y from 1 through $out-width {
+                    $shadows: append($shadows, $out-color $x*$xm*1px $y*$ym*1px, comma);
+                }
+            }
         }
     }
 
-    position: relative;
     display: inline;
-    color: transparent;
+
+    position: relative;
     z-index: 0;
+
+    color: transparent;
     border-bottom: $under-width solid $under-color;
-    width: auto;
 
     &:after {
         content: attr(data-content);
-        display: block;
-        width: 603px;
+        width: 620px;
+
         position: absolute;
         top: 10px; left: 0;
         z-index: 1;
+
         color: #000;
-        text-shadow: $shadows;
         cursor: text;
+
+        text-shadow: $shadows;
     }
 }
