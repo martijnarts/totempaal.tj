@@ -6,7 +6,7 @@
     padding: 30px 40px 0;
 
     width: 700px;
-    font-family: $font-head, sans-serif;
+    font-family: 'Abril Fatface', sans-serif;
 
     color: #444;
     background-color: #fff;
@@ -16,13 +16,13 @@
         height: 100%;
         margin: 0 auto;
         padding: 0;
-        line-height: 1.1;
 
         h1 {
             span {
                 @include underoutline(2, #fff, 4px, #f00);
+                line-height: 1.4;
             }
-            margin: 0 0 20px;
+            margin: 0 0 30px;
             padding: 0;
             box-sizing: border-box;
             font-size: 52px;
@@ -114,7 +114,7 @@
     font-family: $font-main, sans-serif;
     font-weight: 300;
     font-size: 21px;
-    line-height: 1.7;
+    line-height: 1.55;
 
     p {
         margin: {
@@ -188,7 +188,7 @@
         font-family: $font-mono, monospace;
         padding: 20px 15px 20px 40px;
         font-size: 17px;
-        line-height: 1.6;
+        line-height: 1.4;
         overflow: scroll;
         margin: 0 0 10px;
 
@@ -222,7 +222,7 @@
     font-family: $font-main, sans-serif;
     width: 640px;
     padding: 0;
-    margin: 0 auto 10px;
+    margin: 0 auto 30px;
     font-size: 15px;
     overflow: auto;
 
