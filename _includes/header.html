@@ -7,6 +7,8 @@
         <link rel="stylesheet" type="text/css" href="{{ site_url }}/media/css/style.css">
         {% if page.style %}
         <link rel="stylesheet" type="text/css" href="{{ site_url }}/media/css/posts/{{ page.style }}">
+        {% elsif post.style %}
+        <link rel="stylesheet" type="text/css" href="{{ site_url }}/media/css/posts/{{ post.style }}">
         {% endif %}
         <meta name="viewport" content="width=device-width">
     </head>
