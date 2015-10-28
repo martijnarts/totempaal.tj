@@ -14,7 +14,7 @@
     header {
         width: 100%;
         height: 100%;
-        margin: 0 auto;
+        margin: 40px auto 0;
         padding: 0;
 
         h1 {
@@ -39,7 +39,7 @@
     box-sizing: border-box;
     display: block;
     position: absolute;
-    height: 100%;
+    height: auto;
     top: 0; left: 0;
     padding: 0 30px;
 
@@ -77,6 +77,7 @@
     font-size: 14px;
     bottom: 4px;
 }
+
 @media all and (max-width: 700px) {
     #bar {
         width: 100%;
@@ -121,14 +122,16 @@
     font-size: 21px;
     line-height: 1.55;
 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     p {
         margin: {
             top: 0;
             bottom: 40px;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
         }
     }
 
@@ -178,6 +181,17 @@
         font-size: 15px;
     }
 
+    figure {
+        margin: 40px -40px;
+        padding: 0 40px;
+
+        figcaption {
+            margin: 10px 20px 0;
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+        }
+    }
 
     img, div.highlight {
         display: block;
@@ -192,7 +206,7 @@
     pre {
         font-family: $font-mono, monospace;
         padding: 20px 15px 20px 40px;
-        font-size: 17px;
+        font-size: 13px;
         line-height: 1.4;
         overflow: scroll;
         margin: 0 0 10px;
@@ -203,13 +217,19 @@
 
         code {
             color: #eee;
+            padding: initial;
+            background-color: initial;
+            font-size: inherit;
         }
     }
 
     code {
+        padding: 1px 5px 4px 5px;
+        background-color: #eee;
+        white-space: pre-wrap;
         font-family: $font-mono, monospace;
-        color: #333;
         font-weight: 300;
+        font-size: 17px;
     }
 
 
@@ -217,7 +237,7 @@
         margin-top: 0;
 
         &:not(:last-child) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
 }
