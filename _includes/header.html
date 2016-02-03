@@ -10,6 +10,7 @@
         {% elsif post.style %}
         <link rel="stylesheet" type="text/css" href="{{ site_url }}/media/css/posts/{{ post.style }}">
         {% endif %}
+        {% feed_meta %}
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
