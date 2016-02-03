@@ -67,7 +67,7 @@
     }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
     #header {
         width: 100%;
 

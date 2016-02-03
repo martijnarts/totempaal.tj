@@ -5,7 +5,7 @@
     margin: -90px auto 0;
     padding: 10px 40px 0;
 
-    width: 700px;
+    width: $width;
     font-family: 'Abril Fatface', sans-serif;
 
     color: #444;
@@ -78,7 +78,7 @@
     bottom: 4px;
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
     #bar {
         width: 100%;
         height: auto;
@@ -114,11 +114,11 @@
     margin: 0 auto;
     padding: 0 40px 0;
 
-    width: 700px;
+    width: $width;
     background-color: #fff;
 
     font-family: $font-main, sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 21px;
     line-height: 1.55;
 
@@ -195,7 +195,7 @@
 
     img, div.highlight {
         display: block;
-        width: 700px;
+        width: $width;
         margin: 40px -40px;
 
         &:last-child {
@@ -245,7 +245,7 @@
     box-sizing: border-box;
 
     font-family: $font-main, sans-serif;
-    width: 640px;
+    width: $width - 60px;
     padding: 0;
     margin: 0 auto 30px;
     font-size: 15px;
@@ -264,7 +264,12 @@
     }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
+    #bar {
+        header {
+            margin-top: 0;
+        }
+    }
     #post {
         width: 100%;
         padding: 15px 20px;

@@ -9,7 +9,7 @@
     padding: 30px 40px;
     text-align: justify;
 
-    width: 700px;
+    width: $width;
     z-index: 1;
     background-color: #fff;
 
@@ -23,7 +23,7 @@
   }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
   #archive {
     margin-top: 0px;
 

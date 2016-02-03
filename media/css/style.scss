@@ -3,6 +3,7 @@
 // Main styles for http://totempaal.tj
 // Made by, owned by and (c) Martijn Arts 2013 and onwards.
 @import "mixins";
+$width: 768px;
 
 $font-main: 'Source Sans Pro';
 $font-head: 'Fira Sans';
@@ -25,7 +26,7 @@ body {
     padding: 150px 0 0 0;
     background-color: #eaeaea;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
     #container {
         padding: 35px 0 0 0;
     }

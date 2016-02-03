@@ -14,7 +14,7 @@
   }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
   #top {
     margin-top: 0;
     width: 100%;

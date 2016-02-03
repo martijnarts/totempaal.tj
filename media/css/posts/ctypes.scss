@@ -1,0 +1,43 @@
+---
+---
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.memory {
+    box-sizing: border-box;
+
+    width: 768px;
+    margin: 40px -40px;
+    padding: 40px;
+
+    background-color: #222;
+
+    @include clearfix;
+
+    .byte {
+        float: left;
+        margin-right: 24px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .bit {
+            float: left;
+            height: 16px;
+            width: 16px;
+            margin-right: 8px;
+            margin-bottom: 16px + 2 * 9px;
+            background-color: white;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

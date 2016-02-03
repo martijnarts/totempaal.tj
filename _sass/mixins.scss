@@ -33,7 +33,7 @@
 
     &:after {
         content: attr(data-content);
-        width: 620px;
+        width: $width - (80px);
 
         position: absolute;
         top: 10px; left: 0;
@@ -43,5 +43,14 @@
         cursor: text;
 
         text-shadow: $shadows;
+    }
+
+    @media screen and (max-width: #{$width - 80px}) {
+        color: black;
+        border-bottom: none;
+
+        &:after {
+            content: none;
+        }
     }
 }

@@ -1,6 +1,6 @@
 #footer {
   box-sizing: border-box;
-  width: 700px;
+  width: $width;
   margin: 30px auto;
   padding-bottom: 20px;
 
@@ -10,7 +10,7 @@
 
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: $width) {
   #footer {
     width: 100%;
   }
