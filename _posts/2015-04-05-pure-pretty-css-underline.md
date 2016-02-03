@@ -1,5 +1,6 @@
 ---
 title: Pure and pretty CSS underline effect
+layout: post
 ---
 
 There's a thing about the "regular" CSS `text-decoration: underline` property
