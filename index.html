@@ -1,10 +1,19 @@
 ---
 ---
-{% assign post = site.posts.first %}
-{% assign content = post.content %}
-
 {% include header.html %}
 
-{% include post_detail.html %}
+{% for post in paginator.posts %}
+    {% if post.style %}
+        {% assign content = post.excerpt %}
+    {% else %}
+        {% assign content = post.content %}
+    {% endif %}
+    {% include post_detail.html %}
+    {% if post.style %}
+        <p class="post">
+            <a href="{{ post.url }}">Read more&hellip;</a>
+        </p>
+    {% endif %}
+{% endfor %}
 
 {% include footer.html %}

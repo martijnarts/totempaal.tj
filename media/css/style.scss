@@ -5,15 +5,15 @@
 @import "mixins";
 $width: 768px;
 
-$font-main: 'Source Sans Pro';
-$font-head: 'Fira Sans';
+$font-main: 'Playfair Display';
+$font-head: 'Oswald';
 $font-mono: 'Source Code Pro';
 
 html, head, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #eaeaea;
+    background-color: #fff;
 }
 body {
     overflow-y: scroll;
@@ -24,7 +24,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 150px 0 0 0;
-    background-color: #eaeaea;
+    background-color: #fff;
 }
 @media all and (max-width: $width) {
     #container {
@@ -49,21 +49,26 @@ body {
 a {
     &:link, &:visited {
         color: #f00;
+        background: transparent;
+        text-decoration: none;
         &.nostyle {
             color: inherit;
         }
 
-        transition: color 0.2s linear;
+        //transition: color 0.2s ease-out;
+        //transition: background 0.2s ease-out;
     }
     &:hover {
-        color: #a00;
+        background: #f00;
+        color: #fff;
 
         &.nostyle {
-            color: #f00;
+            color: #fff;
         }
     }
     &:active, &:active.nostyle {
-        color: #600;
+        color: #000;
+        background: #0ff;
     }
 }
 

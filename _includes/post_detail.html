@@ -20,24 +20,34 @@
 {% endif %}
 
 {% if page.hero %}
-<div id="top">
-    <div id="hero">
+<div class="top">
+    <div class="hero">
         <img src="{{ page.hero }}" alt="Hero">
     </div>
 </div>
 {% endif %}
 
-<div id="bar">
+<div class="bar">
     <header>
-        <h1><span data-content="{{ title }}">{{ title }}</span></h1>
+        <a class="nostyle" href="{{ post.url }}">
+            <h1><span data-content="{{ title }}">{{ title }}</span></h1>
+        </a>
     </header>
-    <div id="newer">{% if next %}<a href="{{ next.url }}">&lt; newer</a>{% endif %}</div>
-    <div id="older">{% if previous %}<a href="{{ previous.url }}">older &gt;</a>{% endif %}</div>
 </div>
 
-<div id="post">
-    <div id="meta" class="minor">
+<div class="post">
+    <div class="meta" class="minor">
+        {% if page.layout == 'post' and previous %}
+            <a href="{{ previous.url }}" title="{{ previous.title }}">&lt; previous</a>
+            &mdash;
+        {% endif %}
+
         <time datetime="{{ date }}">{{ date | date:"%b %d, %Y" }}</time>
+
+        {% if page.layout == 'post' and next %}
+            &mdash;
+            <a href="{{ next.url }}" title="{{ next.title }}">next &gt;</a>
+        {% endif %}
     </div>
 
     {{ content }}
