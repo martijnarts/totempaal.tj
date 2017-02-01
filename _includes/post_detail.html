@@ -36,18 +36,24 @@
 </div>
 
 <div class="post">
-    <div class="meta" class="minor">
-        {% if page.layout == 'post' and previous %}
-            <a href="{{ previous.url }}" title="{{ previous.title }}">&lt; previous</a>
-            &mdash;
-        {% endif %}
+    <div class="meta minor">
+        <div class="left">
+            {% if page.layout == 'post' and previous %}
+                <a href="{{ previous.url }}" title="{{ previous.title }}">&lt; previous</a>
+                &mdash;
+            {% endif %}
 
-        <time datetime="{{ date }}">{{ date | date:"%b %d, %Y" }}</time>
+            <time datetime="{{ date }}">{{ date | date:"%b %d, %Y" }}</time>
 
-        {% if page.layout == 'post' and next %}
-            &mdash;
-            <a href="{{ next.url }}" title="{{ next.title }}">next &gt;</a>
-        {% endif %}
+            {% if page.layout == 'post' and next %}
+                &mdash;
+                <a href="{{ next.url }}" title="{{ next.title }}">next &gt;</a>
+            {% endif %}
+        </div>
+
+        <div class="right">
+            <div class="addthis_inline_share_toolbox"></div>
+        </div>
     </div>
 
     {{ content }}

@@ -217,21 +217,19 @@
     box-sizing: border-box;
 
     font-family: $font-main, sans-serif;
-    width: $width - 60px;
     padding: 0;
     margin: 0 auto 30px;
     font-size: 15px;
-    overflow: auto;
 
     &:after {
         content: "";
         display: table;
         clear: both;
     }
-    .tags {
+    .left {
         float: left;
     }
-    .date {
+    .right {
         float: right;
     }
 }
