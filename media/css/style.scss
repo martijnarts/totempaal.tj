@@ -72,6 +72,17 @@ a {
     }
 }
 
+abbr {
+    font-variant: all-small-caps;
+}
+
+ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+ol.roman {
+    list-style-type: lower-roman;
+}
+
 @import "header";
 @import "hero";
 @import "post";

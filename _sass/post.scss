@@ -6,17 +6,17 @@
 
     font-family: 'Abril Fatface', sans-serif;
 
-    color: .000;
-    background-color: #fff;
+    width: 768px;
+    margin: 0 auto;
 
     &:nth-child(2) {
         margin-top: -90px;
     }
 
     header {
-        width: 100%;
+        width: 768px + 2 * 150px;
         height: 100%;
-        margin: 40px auto 0;
+        margin: 40px 0 0 -200px;
         padding: 0;
 
         h1 {
@@ -78,6 +78,16 @@
     }
 }
 
+@keyframes highlight {
+    0% {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    100% {
+        background-color: inherit;
+    }
+}
+
 
 .post {
     box-sizing: border-box;
@@ -105,28 +115,11 @@
         }
     }
 
-    ol, ul {
-        counter-reset: li;
-    }
-    &> ol {
+    &> ol, &> ul {
         margin-bottom: 40px;
     }
-    li {
-        list-style: none;
-    }
-    li:before {
-        box-sizing: border-box;
-        content: counter(li) ".";
-        counter-increment: li;
-
-        font-family: $font-head, serif;
-        font-weight: 300;
-        color: #666;
-
-        margin-right: 8px;
-    }
-    ul > li:before {
-        content: "•";
+    ul li {
+        list-style-type: '· ';
     }
 
     blockquote {
@@ -209,6 +202,23 @@
         margin-top: 0;
 
         &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    sup:target {
+        animation: 2s ease-out 2s 1 both highlight;
+    }
+
+    .footnotes {
+        border-top: 1px solid #aaa;
+        font-size: smaller;
+
+        li:target {
+            animation: 2s ease-out 2s 1 both highlight;
+        }
+
+        p {
             margin-bottom: 20px;
         }
     }
