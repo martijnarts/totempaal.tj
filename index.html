@@ -3,13 +3,13 @@
 {% include header.html %}
 
 {% for post in paginator.posts %}
-    {% if post.style %}
+    {% if post.style or post.shouldExcerpt %}
         {% assign content = post.excerpt %}
     {% else %}
         {% assign content = post.content %}
     {% endif %}
     {% include post_detail.html %}
-    {% if post.style %}
+    {% if post.style or post.shouldExcerpt %}
         <p class="post">
             <a href="{{ post.url }}">Read more&hellip;</a>
         </p>

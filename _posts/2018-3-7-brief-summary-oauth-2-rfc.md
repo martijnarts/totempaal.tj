@@ -1,6 +1,9 @@
 ---
 title: A brief summary of the OAuth 2.0 RFC
 layout: post
+shouldExcerpt: true
+excerpt:
+    <p>This is the briefest useful summary I could come up with for OAuth 2.0, after reading the original RFC.</p>
 ---
 
 This is the briefest useful[^lol-useful] summary[^lol-summary] I could come up
