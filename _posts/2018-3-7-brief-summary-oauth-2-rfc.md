@@ -132,7 +132,7 @@ Authorization Server every now and then, to see if they're still authorized to
 access the protected resource.
 
 So essentially, Refresh Tokens exist to allow you to revoke authorizations, or
-have sessions time out.
+have sessions time out. This is how Refresh Tokens work:
 
 ```
               Client: ------------------------------------------------->
