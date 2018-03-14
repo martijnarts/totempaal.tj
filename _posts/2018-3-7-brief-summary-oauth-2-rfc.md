@@ -13,7 +13,7 @@ RFC][rfc6749].
 
 [^lol-useful]:
     We define "useful" here as meaning "completely useless for any practical
-    purposes that aren't 'diving deaper into OAuth 2.0'", so take that as you
+    purposes that aren't 'diving deeper into OAuth 2.0'", so take that as you
     will.
 
 [^lol-summary]:
