@@ -39,6 +39,9 @@
         padding: 8px 0;
     }
 }
+li {
+    list-style-type: '· ';
+}
 
 .minor {
     width: 100%;
@@ -46,6 +49,11 @@
     display: block;
     font-size: 14px;
     bottom: 4px;
+}
+
+.twitter-tweet-rendered {
+    margin-bottom: 40px !important;
+    margin-top: 0 !important;
 }
 
 @media all and (max-width: $width) {
@@ -118,9 +126,6 @@
     &> ol, &> ul {
         margin-bottom: 40px;
     }
-    ul li {
-        list-style-type: '· ';
-    }
 
     blockquote {
         margin: 20px 0 40px 0;
@@ -160,6 +165,14 @@
         display: block;
         width: $width;
         margin: 40px -40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .highlighter-rouge {
+        margin-bottom: 40px;
 
         &:last-child {
             margin-bottom: 0;
