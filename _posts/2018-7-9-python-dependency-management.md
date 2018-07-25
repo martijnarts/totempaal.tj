@@ -28,9 +28,9 @@ Locking a dependency tree has a simple use: making sure that all environments
 installed from that locked tree run the same code. This is extremely important
 for applications. You don't want to risk your production environment being
 different from your local machine, where you ran all your tests. For libraries,
-wedon't care so much about this: we defer the responsibility to the application
-builder. That also gives them the opportunity to update child dependencies
-independently.
+we don't care so much about this: we defer the responsibility to the
+application builder. That also gives them the opportunity to update child
+dependencies independently.
 
 Traditionally in Python we lock dependencies with the `requirements.txt` file.
 It allows us the possibility to keep a flat list of your entire dependency
@@ -86,7 +86,10 @@ exist! Here's how to integrate with each:
 If you make sure your Pipfile refers to your own package as an editable
 dependency, it'll automatically use the `setup.py` to install the dependencies.
 This makes sure you're using the same way to install your module as your users
-will! No need to lock any versions at all.
+will!
+
+Do remember to lock your direct requirements in `setup.py` as liberally as
+possible. Try not to use `==` locking, instead opting for `>=` or similar.
 
 ```toml
 [[source]]
@@ -110,7 +113,8 @@ through the normal `setup.py install` method, you'll still get the requirements
 listed in `install_requires`. You also get the benefits of the `Pipfile`, plus
 any development packages in `dev-packages`.
 
-If you prefer (I do), you can let Pipenv add this line for you with `pipenv install -e .`.
+If you prefer (I do), you can let Pipenv add this line for you with
+`pipenv install -e .`.
 
 Since the lockfile is separate for `Pipfile`s, you don't have to worry about
 the lockfile for libraries. You can `.gitignore` it or not, it doesn't make
@@ -170,14 +174,11 @@ production with `pipenv install --deploy`, or through fully locked
 
 ## Closing remarks
 
-I've long thought the Python packaging setup to be a complete mess. Over the
-course of this research I'll admit that it's actually quite nicely designed,
-but simply not very intuitively. It's flexible to a point of confusion. Using
-these methods of dependency management work nicely for me, but I'm sure they
-don't for everyone.
-
-Either way, I hope this helps some people to not have to go through the mess of
-dependency management that I've gone through in earlier days.
+Python packaging is a bit of a nicely designed but unintuitive mess. It's
+flexible to a point of confusion. Using these methods of dependency management
+work nicely for me, but I'm sure they don't for everyone. Either way, I hope
+this helps some people to not have to go through the mess of dependency
+management that I've gone through in earlier days.
 
 [pipenv]: https://docs.pipenv.org/
 
