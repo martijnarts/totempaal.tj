@@ -1,19 +1,5 @@
----
----
-{% include header.html %}
-
-{% for post in paginator.posts %}
-    {% if post.style or post.shouldExcerpt %}
-        {% assign content = post.excerpt %}
-    {% else %}
-        {% assign content = post.content %}
-    {% endif %}
-    {% include post_detail.html %}
-    {% if post.style or post.shouldExcerpt %}
-        <p class="post">
-            <a href="{{ post.url }}">Read more&hellip;</a>
-        </p>
-    {% endif %}
-{% endfor %}
-
-{% include footer.html %}
+<!DOCTYPE html>
+<title>Martijn Arts's Blog</title>
+<body>
+    <h1>Martijn Arts's Blog</h1>
+    <p>Sometime in the future again, maybe...
